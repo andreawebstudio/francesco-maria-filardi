@@ -6,8 +6,8 @@ Nessuna build: Vercel pubblica i file così come sono a ogni push su `main`.
 ## Lavorarci da un altro dispositivo
 
 ```bash
-git clone https://github.com/andreawebstudio/filardi-osteopata-sito.git
-cd filardi-osteopata-sito
+git clone https://github.com/andreawebstudio/francesco-maria-filardi.git
+cd francesco-maria-filardi
 ```
 
 Apri `index.html` nel browser (o usa `.claude/launch.json` nell'app Claude per l'anteprima locale),
