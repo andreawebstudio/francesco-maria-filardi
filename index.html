@@ -1,0 +1,924 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Francesco Maria Filardi | Osteopata ad Alatri</title>
+<meta name="description" content="Francesco Maria Filardi, osteopata ad Alatri. Un percorso professionale che unisce osteopatia, formazione in massofisioterapia e scienze motorie.">
+<meta name="theme-color" content="#F7F5F0">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="it_IT">
+<meta property="og:title" content="Francesco Maria Filardi | Osteopata ad Alatri">
+<meta property="og:description" content="Un percorso professionale che unisce osteopatia, formazione in massofisioterapia e scienze motorie. Studio riabilitativo, Via La Stazza 4, Alatri (FR).">
+<meta property="og:image" content="images/hero-1920.webp">
+<!-- TODO prima della pubblicazione: aggiungere <link rel="canonical"> e og:url con il dominio definitivo, e rendere assoluto l'URL di og:image -->
+<link rel="preload" as="image" href="images/hero-1920.webp" media="(min-width:768px)">
+<link rel="preload" as="image" href="images/hero-1024.webp" media="(max-width:767px)">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,500;9..40,600;9..40,700&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --sage:#879B88;
+  --forest:#354C43;
+  --ivory:#F7F5F0;
+  --sand:#E7E0D5;
+  --taupe:#B8AFA3;
+  --charcoal:#303632;
+  --white:#FFFFFF;
+
+  --font-title:"DM Sans", system-ui, sans-serif;
+  --font-text:"Source Sans 3", system-ui, sans-serif;
+
+  --radius-s:10px;
+  --radius-m:18px;
+  --radius-l:28px;
+  --shadow:0 1px 2px rgba(48,54,50,.04), 0 8px 28px rgba(48,54,50,.05);
+  --ease:cubic-bezier(.22,.61,.36,1);
+  --header-h:76px;
+  --wrap:1160px;
+  --gutter:clamp(16px,4vw,40px);
+  --section-y:clamp(72px,10vw,128px);
+}
+
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:calc(var(--header-h) + 8px);-webkit-text-size-adjust:100%}
+body{
+  margin:0;background:var(--ivory);color:var(--charcoal);
+  font-family:var(--font-text);font-size:clamp(1.0625rem,1vw + .8rem,1.1875rem);line-height:1.7;
+  -webkit-font-smoothing:antialiased;overflow-x:hidden;
+}
+img{max-width:100%;display:block}
+a{color:var(--forest)}
+h1,h2,h3{font-family:var(--font-title);color:var(--forest);margin:0;line-height:1.18;letter-spacing:-.015em}
+p{margin:0 0 1.1em}
+p:last-child{margin-bottom:0}
+strong{font-weight:600;color:var(--forest)}
+
+.skip{position:absolute;left:16px;top:-60px;background:var(--forest);color:#fff;padding:10px 18px;border-radius:var(--radius-s);z-index:200;text-decoration:none;font-weight:600;transition:top .3s var(--ease)}
+.skip:focus{top:12px}
+:focus-visible{outline:2px solid var(--forest);outline-offset:3px;border-radius:4px}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+
+.wrap{width:100%;max-width:var(--wrap);margin:0 auto;padding:0 var(--gutter)}
+.section{padding:var(--section-y) 0;position:relative}
+.bg-ivory{background:var(--ivory)}
+.bg-sand{background:var(--sand)}
+.bg-white{background:var(--white)}
+
+/* ---------- Section heads (sempre centrati) ---------- */
+.head{text-align:center;max-width:760px;margin:0 auto clamp(44px,6vw,72px)}
+.eyebrow{
+  display:inline-flex;align-items:center;gap:12px;
+  font-family:var(--font-text);font-weight:600;font-size:.8125rem;letter-spacing:.2em;text-transform:uppercase;
+  color:var(--forest);margin-bottom:18px;
+}
+.eyebrow::before,.eyebrow::after{content:"";width:28px;height:1px;background:var(--sage)}
+.head h2{font-size:clamp(1.75rem,2.6vw + 1rem,2.75rem);font-weight:600}
+.head .lead{margin-top:20px;font-size:clamp(1.0625rem,.6vw + .95rem,1.25rem);color:var(--charcoal)}
+.arc{display:block;margin:22px auto 0;width:56px;height:14px}
+
+/* ---------- Buttons ---------- */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:14px 30px;
+  font-family:var(--font-text);font-weight:600;font-size:.9375rem;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;
+  border-radius:999px;border:1.5px solid var(--forest);cursor:pointer;
+  transition:background-color .35s var(--ease),color .35s var(--ease),filter .35s var(--ease),transform .35s var(--ease);
+}
+.btn-primary{background:var(--forest);color:var(--white)}
+.btn-primary:hover{filter:brightness(1.18)}
+.btn-outline{background:transparent;color:var(--forest)}
+.btn-outline:hover{background:rgba(53,76,67,.07)}
+.btn:active{transform:translateY(1px)}
+.cta-row{display:flex;flex-wrap:wrap;gap:14px;justify-content:center}
+.cta-end{text-align:center;margin-top:clamp(44px,6vw,64px)}
+
+/* ---------- Header ---------- */
+.site-header{
+  position:sticky;top:0;z-index:100;background:rgba(247,245,240,.94);
+  -webkit-backdrop-filter:saturate(1.2) blur(10px);backdrop-filter:saturate(1.2) blur(10px);
+  border-bottom:1px solid rgba(184,175,163,.55);
+}
+.header-inner{display:flex;align-items:center;justify-content:space-between;gap:24px;height:var(--header-h);max-width:1400px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;flex-shrink:0}
+.brand-mark{width:10px;height:34px;flex-shrink:0}
+.brand-text{display:flex;flex-direction:column;line-height:1.1}
+.brand-name{font-family:var(--font-title);font-weight:600;font-size:clamp(.9375rem,.4vw + .8rem,1.0625rem);letter-spacing:.06em;color:var(--forest);white-space:nowrap}
+.brand-sub{font-family:var(--font-text);font-weight:500;font-size:.75rem;letter-spacing:.32em;color:var(--forest);margin-top:5px;opacity:.85}
+
+.nav{display:flex;align-items:center;gap:clamp(18px,1.8vw,28px)}
+.nav ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:nowrap;gap:clamp(14px,1.35vw,24px)}
+.nav a.link{
+  font-size:.9375rem;font-weight:500;color:var(--charcoal);text-decoration:none;white-space:nowrap;padding:6px 0;position:relative;
+}
+.nav a.link::after{content:"";position:absolute;left:0;right:0;bottom:0;height:1px;background:var(--sage);transform:scaleX(0);transform-origin:center;transition:transform .35s var(--ease)}
+.nav a.link:hover::after,.nav a.link[aria-current="true"]::after{transform:scaleX(1)}
+.nav .btn{min-height:44px;padding:10px 20px;font-size:.8125rem;white-space:nowrap}
+
+.burger{
+  display:none;width:48px;height:48px;border:1px solid var(--taupe);border-radius:50%;background:var(--white);cursor:pointer;
+  align-items:center;justify-content:center;flex-shrink:0;
+}
+.burger span{display:block;width:18px;height:1.5px;background:var(--forest);position:relative;transition:background .3s}
+.burger span::before,.burger span::after{content:"";position:absolute;left:0;width:18px;height:1.5px;background:var(--forest);transition:transform .35s var(--ease)}
+.burger span::before{top:-6px}.burger span::after{top:6px}
+.burger[aria-expanded="true"] span{background:transparent}
+.burger[aria-expanded="true"] span::before{transform:translateY(6px) rotate(45deg)}
+.burger[aria-expanded="true"] span::after{transform:translateY(-6px) rotate(-45deg)}
+
+/* Desktop: tutte le voci in fila su una riga; la CTA compare solo quando c'è spazio */
+@media (min-width:1024px) and (max-width:1379px){
+  .nav .btn{display:none}
+}
+@media (min-width:1024px) and (max-width:1199px){
+  .header-inner{gap:16px}
+  .brand-name{font-size:.875rem;letter-spacing:.04em}
+  .nav ul{gap:13px}
+  .nav a.link{font-size:.875rem}
+}
+/* Mobile e tablet: voci solo nel menu burger */
+@media (max-width:1023px){
+  .burger{display:inline-flex}
+  .nav{
+    position:fixed;inset:var(--header-h) 0 auto 0;max-height:calc(100dvh - var(--header-h));overflow-y:auto;
+    flex-direction:column;align-items:stretch;gap:0;padding:12px var(--gutter) 28px;
+    background:var(--ivory);border-bottom:1px solid var(--taupe);
+    opacity:0;visibility:hidden;transform:translateY(-8px);transition:opacity .35s var(--ease),transform .35s var(--ease),visibility .35s;
+  }
+  .nav.open{opacity:1;visibility:visible;transform:none}
+  .nav ul{flex-direction:column;gap:0}
+  .nav li{border-bottom:1px solid rgba(184,175,163,.45)}
+  .nav a.link{display:flex;align-items:center;min-height:52px;font-size:1.0625rem;justify-content:center}
+  .nav a.link::after{display:none}
+  .nav .btn{margin-top:22px;min-height:52px;font-size:.875rem}
+}
+@media (max-width:380px){
+  .header-inner{gap:10px}
+  .brand-name{font-size:.75rem;letter-spacing:.02em}
+  .brand-sub{font-size:.6875rem;letter-spacing:.24em}
+  .brand{gap:8px}
+  .burger{width:44px;height:44px}
+}
+
+/* ---------- Hero ---------- */
+.hero{position:relative;min-height:calc(100svh - var(--header-h));display:flex;align-items:center;overflow:hidden;isolation:isolate}
+.hero-media{position:absolute;inset:0;z-index:-2}
+.hero-media img{width:100%;height:100%;object-fit:cover;object-position:center 40%}
+.hero::before{
+  content:"";position:absolute;inset:0;z-index:-1;
+  background:radial-gradient(ellipse 62% 58% at center, rgba(247,245,240,.84) 0%, rgba(247,245,240,.66) 55%, rgba(247,245,240,.22) 100%);
+}
+.hero-content{text-align:center;max-width:880px;margin:0 auto;padding:clamp(72px,10vw,120px) var(--gutter)}
+.hero .eyebrow{font-size:clamp(.75rem,.3vw + .68rem,.875rem)}
+.hero h1{font-size:clamp(2.125rem,4.4vw + 1rem,4.25rem);font-weight:600;letter-spacing:-.025em;line-height:1.08}
+.hero h1 .accent{display:block;color:var(--sage);font-weight:700}
+.hero .sub{max-width:660px;margin:26px auto 0;font-size:clamp(1.0625rem,.6vw + .95rem,1.3125rem);color:var(--charcoal)}
+.hero .place{display:inline-flex;align-items:center;gap:10px;margin:22px 0 36px;font-weight:500;font-size:.9375rem;letter-spacing:.08em;color:var(--forest)}
+.hero .place svg{width:16px;height:16px;flex-shrink:0}
+.hero-credit{position:absolute;right:12px;bottom:10px;font-size:.6875rem;color:var(--charcoal);opacity:.7}
+
+/* ---------- Chi sono ---------- */
+.about-grid{
+  display:grid;grid-template-columns:minmax(0,320px) minmax(0,1fr);column-gap:clamp(40px,6vw,88px);
+  grid-template-areas:"head head" "photo text" "edu edu";max-width:1040px;margin:0 auto;align-items:start;
+}
+.about-grid .head{grid-area:head}
+.about-grid .portrait{grid-area:photo}
+.about-grid .about-text{grid-area:text}
+.about-grid .edu{grid-area:edu}
+.portrait{
+  position:relative;width:100%;max-width:320px;aspect-ratio:1;border-radius:50%;margin:0 auto;
+  background:var(--ivory);border:1px solid var(--taupe);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;
+  color:var(--forest);text-align:center;
+}
+.portrait::after{content:"";position:absolute;inset:-14px;border-radius:50%;border:1px solid var(--sage);opacity:.45;border-right-color:transparent;border-bottom-color:transparent;transform:rotate(-20deg)}
+.portrait svg{width:34%;height:auto;opacity:.5}
+.portrait small{font-size:.8125rem;letter-spacing:.12em;text-transform:uppercase;font-weight:500}
+.about-text p{font-size:clamp(1.0625rem,.4vw + 1rem,1.1875rem)}
+.about-text .intro{font-family:var(--font-title);font-weight:500;color:var(--forest);font-size:clamp(1.25rem,.8vw + 1rem,1.5rem);line-height:1.45;margin-bottom:1.2em}
+.edu{margin-top:clamp(48px,6vw,72px);padding-top:clamp(40px,5vw,56px);border-top:1px solid var(--sand)}
+.edu h3{text-align:center;font-size:1.125rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;margin-bottom:32px}
+.edu ol{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,1fr);gap:0;position:relative}
+.edu li{position:relative;padding:28px 20px 0;text-align:center}
+.edu li::before{content:"";position:absolute;top:0;left:0;right:0;height:1px;background:var(--taupe)}
+.edu li::after{content:"";position:absolute;top:-5px;left:50%;width:11px;height:11px;margin-left:-5.5px;border-radius:50%;background:var(--white);border:2px solid var(--sage)}
+.edu .year{display:block;font-family:var(--font-title);font-weight:600;font-size:1.5rem;color:var(--forest);margin-bottom:6px}
+.edu .what{font-size:1rem;line-height:1.5}
+
+/* ---------- A chi mi rivolgo ---------- */
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(20px,2.4vw,32px)}
+.tcard{
+  background:var(--white);border:1px solid rgba(184,175,163,.5);border-radius:var(--radius-m);box-shadow:var(--shadow);
+  padding:clamp(32px,3.4vw,48px) clamp(24px,2.6vw,36px);text-align:center;
+  transition:transform .45s var(--ease),box-shadow .45s var(--ease);
+}
+.tcard:hover{transform:translateY(-4px);box-shadow:0 1px 2px rgba(48,54,50,.04),0 16px 36px rgba(48,54,50,.07)}
+.t-icon{position:relative;width:84px;height:84px;margin:0 auto 26px;border-radius:50%;background:var(--ivory);display:flex;align-items:center;justify-content:center}
+.t-icon::after{content:"";position:absolute;inset:-7px;border-radius:50%;border:1px solid var(--sage);border-bottom-color:transparent;border-left-color:transparent;transform:rotate(-45deg);transition:transform .8s var(--ease)}
+.tcard:hover .t-icon::after{transform:rotate(135deg)}
+.t-icon svg{width:40px;height:40px}
+.tcard h3{font-size:clamp(1.1875rem,.5vw + 1.05rem,1.375rem);font-weight:600;margin-bottom:14px}
+.tcard p{font-size:1.0625rem;line-height:1.65}
+.tcard .dot{display:block;width:28px;height:2px;background:var(--sage);margin:0 auto 16px;border-radius:2px}
+
+/* ---------- Approccio (composizione orbitale) ---------- */
+.approach-intro{max-width:720px;margin:0 auto clamp(48px,6vw,80px);text-align:center;font-size:clamp(1.0625rem,.4vw + 1rem,1.1875rem)}
+.orbit{
+  display:grid;grid-template-columns:1fr minmax(280px,380px) 1fr;grid-template-rows:auto auto;
+  grid-template-areas:"p1 core p3" "p2 core p4";column-gap:clamp(24px,3vw,48px);row-gap:clamp(56px,7vw,96px);
+  align-items:center;max-width:1100px;margin:0 auto;
+}
+.orbit-core{grid-area:core;position:relative;aspect-ratio:1;width:100%}
+.orbit-core svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
+.orbit-core .spin{transform-origin:180px 180px;animation:spin 60s linear infinite}
+.orbit-core .spin-rev{transform-origin:180px 180px;animation:spin 90s linear infinite reverse}
+.orbit-core .node{transition:r .4s var(--ease),fill .4s var(--ease)}
+.orbit-core .node.on{r:7;fill:var(--forest)}
+.orbit-core .halo{transform-box:fill-box;transform-origin:center;animation:breathe 6s ease-in-out infinite}
+.core-label{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;pointer-events:none}
+.core-label span{font-size:.75rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--forest);opacity:.8;margin-bottom:6px}
+.core-label strong{font-family:var(--font-title);font-weight:600;font-size:clamp(1.25rem,1vw + .9rem,1.625rem);line-height:1.2;max-width:170px}
+.pt{position:relative;max-width:330px;cursor:default}
+.pt h3{font-size:clamp(1.25rem,.6vw + 1.05rem,1.5rem);font-weight:600;margin-bottom:10px;transition:color .3s}
+.pt p{font-size:1.0625rem;line-height:1.6}
+.pt .ln{display:flex;align-items:center;gap:0;margin-bottom:16px;width:100%}
+.pt .ln i{display:block;height:1px;background:var(--taupe);flex:1;transition:background .4s var(--ease)}
+.pt .ln b{display:block;width:9px;height:9px;border-radius:50%;border:1.5px solid var(--sage);background:var(--ivory);flex-shrink:0;transition:background .4s var(--ease)}
+.pt:hover .ln i,.pt:focus-within .ln i{background:var(--sage)}
+.pt:hover .ln b{background:var(--sage)}
+.pt-l{text-align:right;justify-self:end}
+.pt-l .ln{flex-direction:row}
+.pt-r{text-align:left;justify-self:start}
+.pt-r .ln{flex-direction:row-reverse}
+.p1{grid-area:p1}.p2{grid-area:p2}.p3{grid-area:p3}.p4{grid-area:p4}
+.approach-quote{text-align:center;margin:clamp(56px,7vw,88px) auto 0;max-width:640px;font-family:var(--font-title);font-weight:500;font-size:clamp(1.125rem,.6vw + 1rem,1.375rem);color:var(--forest);line-height:1.5}
+.approach-quote::before{content:"";display:block;width:56px;height:14px;margin:0 auto 18px;background:no-repeat center/contain url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 56 14'%3E%3Cpath d='M2 12 C 14 1, 42 1, 54 12' fill='none' stroke='%23879B88' stroke-width='1.5' stroke-linecap='round'/%3E%3C/svg%3E")}
+@keyframes spin{to{transform:rotate(360deg)}}
+@keyframes breathe{0%,100%{transform:scale(1)}50%{transform:scale(1.035)}}
+
+/* ---------- Servizi ---------- */
+.cards-sm{max-width:1000px;margin:0 auto;gap:clamp(18px,2vw,26px)}
+.card{
+  background:var(--white);border:1px solid rgba(184,175,163,.5);border-radius:var(--radius-m);overflow:hidden;box-shadow:var(--shadow);
+  display:flex;flex-direction:column;transition:transform .45s var(--ease),box-shadow .45s var(--ease);
+}
+.card:hover{transform:translateY(-4px);box-shadow:0 1px 2px rgba(48,54,50,.04),0 16px 36px rgba(48,54,50,.07)}
+.card-media{aspect-ratio:16/10;overflow:hidden;background:var(--sand)}
+.card-media img{width:100%;height:100%;object-fit:cover;transition:transform .8s var(--ease)}
+.card:hover .card-media img{transform:scale(1.03)}
+.card-body{padding:clamp(20px,2vw,26px);flex:1;text-align:center}
+.card h3{font-size:clamp(1.125rem,.4vw + 1rem,1.25rem);font-weight:600;margin-bottom:10px}
+.card p{font-size:1rem;line-height:1.6}
+.card .dot{display:block;width:24px;height:2px;background:var(--sage);margin:0 auto 14px;border-radius:2px}
+/* ---------- Come funziona (timeline animata) ---------- */
+#come-funziona{overflow:hidden}
+.flow-bg{position:absolute;inset:0;pointer-events:none;z-index:0}
+.flow-bg svg{position:absolute;width:min(900px,120vw);height:auto;left:50%;top:50%;transform:translate(-50%,-50%) translateY(var(--par,0px))}
+#come-funziona .wrap{position:relative;z-index:1}
+.steps{list-style:none;margin:0 auto;padding:0;display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(16px,2.4vw,32px);max-width:1120px;position:relative}
+.track,.track-fill{position:absolute;background:var(--taupe);pointer-events:none}
+.track-fill{background:var(--forest);transform-origin:0 0}
+.step{text-align:center;position:relative}
+.step-num{
+  width:88px;height:88px;margin:0 auto 26px;border-radius:50%;background:var(--ivory);border:1px solid var(--taupe);position:relative;z-index:1;
+  display:flex;align-items:center;justify-content:center;font-family:var(--font-title);font-weight:600;font-size:1.875rem;color:var(--taupe);letter-spacing:-.02em;
+  transition:color .5s var(--ease),border-color .5s var(--ease),background-color .5s var(--ease),transform .5s var(--ease);
+}
+.step-num::after{content:"";position:absolute;inset:-8px;border-radius:50%;border:1px solid var(--sage);border-left-color:transparent;border-bottom-color:transparent;transform:rotate(-135deg);opacity:0;transition:transform .9s var(--ease),opacity .5s var(--ease)}
+.step-num::before{content:"";position:absolute;inset:-1px;border-radius:50%;border:1px solid var(--sage);opacity:0}
+.step.active .step-num{color:var(--white);background:var(--forest);border-color:var(--forest);transform:scale(1.04)}
+.step.active .step-num::after{opacity:1;transform:rotate(-45deg)}
+.step.active .step-num::before{animation:ripple 1.4s var(--ease) 1}
+.step-body{opacity:.35;transform:translateY(10px);transition:opacity .6s var(--ease),transform .6s var(--ease)}
+.step.active .step-body{opacity:1;transform:none}
+.step h3{font-size:1.1875rem;font-weight:600;margin-bottom:10px;letter-spacing:.04em;text-transform:uppercase}
+.step p{max-width:260px;margin:0 auto;font-size:1.0625rem}
+@keyframes ripple{0%{opacity:.8;transform:scale(1)}100%{opacity:0;transform:scale(1.6)}}
+
+/* ---------- Dove ricevo ---------- */
+.addr-box{
+  max-width:420px;margin:0 auto;background:var(--white);border:1px solid rgba(184,175,163,.6);border-radius:var(--radius-m);box-shadow:var(--shadow);
+  padding:32px 28px;text-align:center;
+}
+.addr-box svg{width:44px;height:44px;margin:0 auto 16px;display:block}
+.addr-box .k{display:block;font-size:.75rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--forest);opacity:.8;margin-bottom:8px}
+.addr-box address{font-style:normal;font-family:var(--font-title);font-weight:600;color:var(--forest);font-size:1.3125rem;line-height:1.4}
+
+/* ---------- FAQ ---------- */
+.faq{max-width:860px;margin:0 auto;border-top:1px solid rgba(184,175,163,.7)}
+.faq-item{border-bottom:1px solid rgba(184,175,163,.7)}
+.faq-q{margin:0}
+.faq-q button{
+  width:100%;display:flex;align-items:center;justify-content:space-between;gap:20px;text-align:left;cursor:pointer;
+  background:none;border:0;padding:26px 4px;min-height:64px;
+  font-family:var(--font-text);font-weight:600;font-size:clamp(1.0625rem,.4vw + 1rem,1.1875rem);color:var(--forest);line-height:1.4;
+}
+.faq-icon{flex-shrink:0;width:36px;height:36px;border-radius:50%;border:1px solid var(--sage);position:relative;transition:background .35s var(--ease)}
+.faq-icon::before,.faq-icon::after{content:"";position:absolute;top:50%;left:50%;width:12px;height:1.5px;margin:-.75px 0 0 -6px;background:var(--forest);transition:transform .4s var(--ease)}
+.faq-icon::after{transform:rotate(90deg)}
+.faq-q button[aria-expanded="true"] .faq-icon{background:rgba(135,155,136,.18)}
+.faq-q button[aria-expanded="true"] .faq-icon::after{transform:rotate(0)}
+.faq-a{display:grid;grid-template-rows:0fr;transition:grid-template-rows .4s var(--ease)}
+.faq-a > div{overflow:hidden}
+.faq-a p{padding:0 60px 28px 4px;font-size:1.0625rem}
+.faq-item.open .faq-a{grid-template-rows:1fr}
+
+/* ---------- Contatti (form) ---------- */
+.form-card{
+  max-width:560px;margin:0 auto;background:var(--white);border:1px solid rgba(184,175,163,.5);border-radius:var(--radius-m);box-shadow:var(--shadow);
+  padding:clamp(22px,4vw,34px);
+}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px 16px}
+.field{display:flex;flex-direction:column;gap:6px}
+.field.full{grid-column:1/-1}
+.field label{font-size:.875rem;font-weight:600;letter-spacing:.06em;color:var(--forest)}
+.field label .opt{font-weight:400;color:#5b605c;letter-spacing:0}
+.field input,.field textarea{
+  font-family:var(--font-text);font-size:1rem;color:var(--charcoal);background:var(--ivory);
+  border:1px solid var(--taupe);border-radius:var(--radius-s);padding:10px 14px;min-height:46px;width:100%;
+  transition:border-color .3s var(--ease),background-color .3s var(--ease),box-shadow .3s var(--ease);
+}
+.field textarea{min-height:110px;resize:vertical;line-height:1.55}
+.field input:focus,.field textarea:focus{outline:none;border-color:var(--forest);background:var(--white);box-shadow:0 0 0 3px rgba(135,155,136,.25)}
+.field.invalid input,.field.invalid textarea{border-color:#8a4b3c}
+.err{font-size:.875rem;color:#8a4b3c;min-height:0}
+.consent{grid-column:1/-1;display:flex;align-items:flex-start;gap:10px;font-size:.875rem;line-height:1.5;margin-top:2px}
+.consent input{width:20px;height:20px;margin:1px 0 0;accent-color:var(--forest);flex-shrink:0}
+.consent.invalid label{color:#8a4b3c}
+.form-actions{grid-column:1/-1;text-align:center;margin-top:6px}
+.form-actions .btn{min-width:240px;min-height:48px}
+.form-status{grid-column:1/-1;text-align:center;font-size:.9375rem;color:var(--forest);min-height:1.5em}
+
+/* ---------- Footer ---------- */
+.site-footer{background:var(--forest);color:rgba(255,255,255,.86);padding:clamp(56px,7vw,88px) 0 32px;font-size:1rem}
+.site-footer a{color:rgba(255,255,255,.9);text-decoration:none}
+.site-footer a:hover{color:#fff;text-decoration:underline;text-underline-offset:4px;text-decoration-color:var(--sage)}
+.foot-top{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:clamp(32px,5vw,64px)}
+.foot-brand .brand-name,.foot-brand .brand-sub{color:#fff}
+.foot-brand .motto{margin-top:22px;font-family:var(--font-title);font-weight:500;font-size:1.0625rem;color:#fff;letter-spacing:.02em;max-width:320px;line-height:1.45}
+.foot-h{font-size:.75rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:#C9D3C9;margin:0 0 16px}
+.foot-list{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.foot-links{display:block;columns:2;column-gap:24px}
+.foot-links li{break-inside:avoid;margin-bottom:8px}
+.foot-bottom{margin-top:clamp(40px,5vw,64px);padding-top:24px;border-top:1px solid rgba(255,255,255,.18);font-size:.875rem;color:rgba(255,255,255,.75)}
+
+/* ---------- Reveal ---------- */
+.reveal{opacity:0;transform:translateY(16px);transition:opacity .5s var(--ease),transform .5s var(--ease)}
+.reveal.in{opacity:1;transform:none}
+.no-js .reveal{opacity:1;transform:none}
+
+/* ---------- Responsive ---------- */
+@media (max-width:1024px){
+  .orbit{grid-template-columns:1fr;grid-template-areas:"core" "p1" "p2" "p3" "p4";row-gap:40px;max-width:520px}
+  .orbit-core{max-width:300px;margin:0 auto 8px}
+  .pt,.pt-l,.pt-r{text-align:center;justify-self:center;max-width:440px}
+  .pt .ln{width:120px;margin:0 auto 16px}
+  .pt-l .ln{flex-direction:row}
+  .steps{grid-template-columns:1fr;max-width:480px;gap:44px}
+  .step{display:grid;grid-template-columns:64px 1fr;gap:22px;text-align:left;align-items:start}
+  .step-num{width:64px;height:64px;margin:0;font-size:1.375rem}
+  .step-body{padding-top:14px}
+  .step p{margin:0;max-width:none}
+}
+@media (max-width:960px){
+  .cards{grid-template-columns:1fr;max-width:560px;margin:0 auto}
+  .foot-top{grid-template-columns:1fr 1fr}
+  .foot-brand{grid-column:1/-1}
+  .edu ol{grid-template-columns:repeat(2,1fr);row-gap:36px}
+}
+@media (max-width:820px){
+  .about-grid{grid-template-columns:1fr;grid-template-areas:"photo" "head" "text" "edu"}
+  .about-grid .portrait{max-width:240px;margin-bottom:48px}
+}
+@media (max-width:600px){
+  .cta-row{flex-direction:column;align-items:stretch;max-width:340px;margin:0 auto}
+  .cta-row .btn{width:100%}
+  .edu ol{grid-template-columns:1fr;row-gap:28px}
+  .edu li{padding-top:24px}
+  .faq-a p{padding-right:4px}
+  .foot-top{grid-template-columns:1fr}
+  .btn{padding:14px 22px;letter-spacing:.08em}
+  .hero .eyebrow{display:block;letter-spacing:.16em;line-height:1.6}
+  .hero .eyebrow::before,.hero .eyebrow::after{display:none}
+  .form-grid{grid-template-columns:1fr}
+  .form-actions .btn{width:100%;min-width:0}
+}
+
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{transition-duration:.01ms!important;animation:none!important}
+  .reveal{opacity:1;transform:none}
+}
+</style>
+</head>
+<body class="no-js">
+
+<a class="skip" href="#main">Vai al contenuto</a>
+
+<!-- Elemento grafico riutilizzabile: piccolo arco salvia -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="arc" viewBox="0 0 56 14"><path d="M2 12 C 14 1, 42 1, 54 12" fill="none" stroke="#879B88" stroke-width="1.5" stroke-linecap="round"/></symbol>
+  </defs>
+</svg>
+
+<!-- 1. HEADER -->
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="#home" aria-label="Dott. Francesco Maria Filardi, Osteopata — torna all'inizio">
+      <svg class="brand-mark" viewBox="0 0 10 34" aria-hidden="true"><path d="M8 2 C 1 10, 1 24, 8 32" fill="none" stroke="#879B88" stroke-width="1.6" stroke-linecap="round"/></svg>
+      <span class="brand-text">
+        <span class="brand-name">DOTT. FRANCESCO MARIA FILARDI</span>
+        <span class="brand-sub">OSTEOPATA</span>
+      </span>
+    </a>
+    <button class="burger" type="button" aria-expanded="false" aria-controls="nav" aria-label="Apri il menu"><span></span></button>
+    <nav class="nav" id="nav" aria-label="Navigazione principale">
+      <ul>
+        <li><a class="link" href="#chi-sono">Chi sono</a></li>
+        <li><a class="link" href="#a-chi-mi-rivolgo">A chi mi rivolgo</a></li>
+        <li><a class="link" href="#approccio">Approccio</a></li>
+        <li><a class="link" href="#servizi">Servizi</a></li>
+        <li><a class="link" href="#come-funziona">Come funziona</a></li>
+        <li><a class="link" href="#dove-ricevo">Dove ricevo</a></li>
+        <li><a class="link" href="#faq">FAQ</a></li>
+        <li><a class="link" href="#contatti">Contatti</a></li>
+      </ul>
+      <a class="btn btn-primary" href="#contatti">Richiedi una consulenza</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- 2. HERO -->
+<section class="hero" id="home" aria-labelledby="hero-title">
+  <div class="hero-media">
+    <picture>
+      <source media="(max-width:767px)" srcset="images/hero-1024.webp" width="1024" height="1280">
+      <img src="images/hero-1920.webp" width="1920" height="1080" fetchpriority="high"
+        alt="Trattamento manuale su lettino in un ambiente luminoso (immagine illustrativa)">
+    </picture>
+  </div>
+  <div class="hero-content">
+    <p class="eyebrow">Francesco Maria Filardi · Osteopata</p>
+    <h1 id="hero-title">Esperienza, equilibrio <span class="accent">e attenzione al movimento.</span></h1>
+    <p class="sub">Un percorso professionale che unisce osteopatia, formazione in massofisioterapia e scienze motorie, con un approccio attento alle esigenze della persona.</p>
+    <p class="place">
+      <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 15s5-4.6 5-8.5A5 5 0 0 0 3 6.5C3 10.4 8 15 8 15Z" fill="none" stroke="#354C43" stroke-width="1.3"/><circle cx="8" cy="6.5" r="1.8" fill="#879B88"/></svg>
+      Studio riabilitativo · Alatri (FR)
+    </p>
+    <div class="cta-row">
+      <a class="btn btn-primary" href="#contatti">Richiedi una consulenza</a>
+      <a class="btn btn-outline" href="#servizi">Scopri i miei servizi</a>
+    </div>
+  </div>
+  <span class="hero-credit">Immagine illustrativa</span>
+</section>
+
+<!-- 3. CHI SONO -->
+<section class="section bg-white" id="chi-sono" aria-labelledby="chi-sono-title">
+  <div class="wrap">
+    <div class="about-grid">
+      <div class="head reveal">
+        <p class="eyebrow">Chi sono</p>
+        <h2 id="chi-sono-title">Mi presento...</h2>
+        <svg class="arc" aria-hidden="true"><use href="#arc"/></svg>
+      </div>
+
+      <!-- Placeholder: sostituire con una fotografia autentica del Dott. Filardi (formato quadrato, verrà ritagliata in cerchio) -->
+      <div class="portrait reveal" role="img" aria-label="Spazio riservato alla fotografia del Dott. Francesco Maria Filardi">
+        <svg viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="24" r="11" fill="none" stroke="#354C43" stroke-width="1.6"/><path d="M12 54c3-10 11-15 20-15s17 5 20 15" fill="none" stroke="#354C43" stroke-width="1.6" stroke-linecap="round"/></svg>
+        <small>Foto in arrivo</small>
+      </div>
+
+      <div class="about-text reveal">
+        <p class="intro">Sono il Dott. Francesco Maria Filardi, osteopata con studio ad Alatri.</p>
+        <p>Il mio percorso professionale nasce dall'interesse per <strong>il corpo umano, il movimento</strong> e le discipline dedicate alla persona.</p>
+        <p>Nel 1994 ho conseguito il <strong>diploma ISEF</strong> e nel 2005 ho completato la mia formazione universitaria in <strong>Scienze e Tecnica dello Sport</strong>. Nel 2007 ho inoltre conseguito un titolo triennale in <strong>massofisioterapia</strong>.</p>
+        <p>Nel corso degli anni ho approfondito il mio percorso nell'ambito dell'<strong>osteopatia</strong>, che rappresenta oggi la mia principale attività professionale.</p>
+        <p>Da <strong>circa trent'anni</strong> lavoro nella stessa struttura ad Alatri, un luogo che nel tempo si è trasformato: inizialmente dedicato anche alla palestra e alla fisioterapia, dal 2017 è uno studio riabilitativo.</p>
+        <p>Oggi condivido questo spazio con altre due professioniste, una massofisioterapista e una terapista della neuro e psicomotricità dell'età evolutiva.</p>
+        <p>La mia storia professionale unisce esperienza, formazione e un interesse costante per il corpo e il movimento.</p>
+      </div>
+
+      <div class="edu reveal">
+        <h3>Formazione</h3>
+        <ol>
+          <li><span class="year">1994</span><span class="what">Diploma ISEF</span></li>
+          <li><span class="year">2005</span><span class="what">Laurea magistrale in Scienze e Tecnica dello Sport</span></li>
+          <li><span class="year">2007</span><span class="what">Formazione triennale in massofisioterapia</span></li>
+          <li><span class="year">Osteopatia</span><span class="what">Formazione e attività professionale</span></li>
+        </ol>
+        <!-- DA VERIFICARE prima della pubblicazione: iscrizione al ROI (circa dieci anni) e stato attuale dell'iscrizione professionale.
+             Non indicare istituto né laurea in Osteopatia finché non confermati. -->
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 4. A CHI MI RIVOLGO -->
+<section class="section bg-ivory" id="a-chi-mi-rivolgo" aria-labelledby="target-title">
+  <div class="wrap">
+    <div class="head reveal">
+      <p class="eyebrow">A chi mi rivolgo</p>
+      <h2 id="target-title">Ogni persona ha una storia, ogni corpo le sue esigenze.</h2>
+      <p class="lead">Un approccio professionale che parte dall'ascolto e dalla valutazione delle esigenze individuali.</p>
+    </div>
+
+    <div class="cards">
+      <article class="tcard reveal">
+        <div class="t-icon" aria-hidden="true">
+          <svg viewBox="0 0 40 40"><circle cx="20" cy="20" r="3" fill="#354C43"/><path d="M12.5 12.5a10.6 10.6 0 0 0 0 15M27.5 12.5a10.6 10.6 0 0 1 0 15" fill="none" stroke="#354C43" stroke-width="1.5" stroke-linecap="round"/><path d="M7 7a18.4 18.4 0 0 0 0 26M33 7a18.4 18.4 0 0 1 0 26" fill="none" stroke="#879B88" stroke-width="1.5" stroke-linecap="round"/></svg>
+        </div>
+        <h3>Chi desidera una valutazione osteopatica</h3>
+        <span class="dot" aria-hidden="true"></span>
+        <p>Per chi desidera rivolgersi a un osteopata per una valutazione professionale e per comprendere se un percorso osteopatico possa essere appropriato alle proprie esigenze.</p>
+      </article>
+      <article class="tcard reveal">
+        <div class="t-icon" aria-hidden="true">
+          <svg viewBox="0 0 40 40"><path d="M20 33c-6.5 0-11.5-5.6-11.5-13S13.5 7 20 7s11.5 5.6 11.5 13" fill="none" stroke="#879B88" stroke-width="1.5" stroke-linecap="round"/><path d="M20 28.5c-3.9 0-7-3.8-7-8.5s3.1-8.5 7-8.5 7 3.8 7 8.5v2" fill="none" stroke="#354C43" stroke-width="1.5" stroke-linecap="round"/><path d="M20 24c-1.4 0-2.5-1.8-2.5-4s1.1-4 2.5-4 2.5 1.8 2.5 4v6.5" fill="none" stroke="#354C43" stroke-width="1.5" stroke-linecap="round"/></svg>
+        </div>
+        <h3>Chi cerca un approccio individuale</h3>
+        <span class="dot" aria-hidden="true"></span>
+        <p>Per chi considera importante un'assistenza che tenga conto della propria storia, delle necessità personali e delle indicazioni professionali.</p>
+      </article>
+      <article class="tcard reveal">
+        <div class="t-icon" aria-hidden="true">
+          <svg viewBox="0 0 40 40"><path d="M5 26c5 0 6-12 11.5-12S22 26 27.5 26 33 16 35 14" fill="none" stroke="#354C43" stroke-width="1.5" stroke-linecap="round"/><path d="M5 31.5c6 0 9-4 15-4s9 4 15 4" fill="none" stroke="#879B88" stroke-width="1.5" stroke-linecap="round"/><circle cx="35" cy="14" r="2.6" fill="#879B88"/></svg>
+        </div>
+        <h3>Chi vuole prendersi cura del movimento</h3>
+        <span class="dot" aria-hidden="true"></span>
+        <p>Per chi desidera approfondire il rapporto tra corpo, movimento e benessere attraverso una consulenza professionale coerente con le competenze del professionista.</p>
+      </article>
+    </div>
+
+    <div class="cta-end reveal">
+      <a class="btn btn-primary" href="#contatti">Richiedi informazioni</a>
+    </div>
+  </div>
+</section>
+
+<!-- 5. IL MIO APPROCCIO -->
+<section class="section bg-sand" id="approccio" aria-labelledby="approccio-title">
+  <div class="wrap">
+    <div class="head reveal">
+      <p class="eyebrow">Il mio approccio</p>
+      <h2 id="approccio-title">Ascolto, valutazione e attenzione alla persona.</h2>
+    </div>
+    <div class="approach-intro reveal">
+      <p>Il mio percorso formativo nasce dall'incontro tra discipline legate al corpo e al movimento. Questa esperienza rappresenta il contesto professionale attraverso cui affronto il lavoro osteopatico, con attenzione alle esigenze individuali.</p>
+    </div>
+
+    <div class="orbit">
+      <div class="orbit-core reveal" aria-hidden="true">
+        <svg viewBox="0 0 360 360">
+          <circle cx="180" cy="180" r="176" fill="none" stroke="#B8AFA3" stroke-width="1"/>
+          <g class="spin"><circle cx="180" cy="180" r="150" fill="none" stroke="#879B88" stroke-width="1.2" stroke-dasharray="2 9" stroke-linecap="round"/></g>
+          <g class="spin-rev"><path d="M180 58a122 122 0 0 1 122 122" fill="none" stroke="#354C43" stroke-width="1.4" stroke-linecap="round"/><path d="M180 302a122 122 0 0 1-122-122" fill="none" stroke="#879B88" stroke-width="1.4" stroke-linecap="round"/></g>
+          <path class="halo" d="M180 92c44 0 92 30 92 86s-40 94-92 94-90-34-90-92 46-88 90-88Z" fill="#F7F5F0"/>
+          <circle cx="180" cy="180" r="64" fill="#FFFFFF"/>
+          <circle class="node" data-n="1" cx="55.5" cy="55.5" r="5" fill="#879B88"/>
+          <circle class="node" data-n="2" cx="55.5" cy="304.5" r="5" fill="#879B88"/>
+          <circle class="node" data-n="3" cx="304.5" cy="55.5" r="5" fill="#879B88"/>
+          <circle class="node" data-n="4" cx="304.5" cy="304.5" r="5" fill="#879B88"/>
+        </svg>
+        <div class="core-label"><span>Al centro</span><strong>la persona</strong></div>
+      </div>
+
+      <div class="pt pt-l p1 reveal" data-n="1"><div class="ln" aria-hidden="true"><i></i><b></b></div><h3>Ascolto</h3><p>Comprendere le esigenze e la storia della persona.</p></div>
+      <div class="pt pt-l p2 reveal" data-n="2"><div class="ln" aria-hidden="true"><i></i><b></b></div><h3>Valutazione individuale</h3><p>Considerare le caratteristiche e le necessità del singolo caso, nell'ambito delle competenze professionali.</p></div>
+      <div class="pt pt-r p3 reveal" data-n="3"><div class="ln" aria-hidden="true"><i></i><b></b></div><h3>Attenzione al movimento</h3><p>Valorizzare le conoscenze maturate nel campo delle scienze motorie.</p></div>
+      <div class="pt pt-r p4 reveal" data-n="4"><div class="ln" aria-hidden="true"><i></i><b></b></div><h3>Approccio manuale</h3><p>Utilizzare le competenze osteopatiche secondo appropriatezza e indicazioni professionali.</p></div>
+    </div>
+
+    <p class="approach-quote reveal">Un percorso professionale sviluppato attraverso anni di studio e attività, al servizio della persona.</p>
+  </div>
+</section>
+
+<!-- 6. I SERVIZI -->
+<section class="section bg-white" id="servizi" aria-labelledby="servizi-title">
+  <div class="wrap">
+    <div class="head reveal">
+      <p class="eyebrow">I servizi</p>
+      <h2 id="servizi-title">Competenze e percorsi dedicati alla persona.</h2>
+      <p class="lead">L'osteopatia rappresenta la mia principale attività professionale, all'interno di un percorso formativo più ampio dedicato al corpo e al movimento.</p>
+    </div>
+
+    <div class="cards cards-sm">
+      <article class="card reveal">
+        <div class="card-media"><img loading="lazy" decoding="async" width="800" height="500"
+          src="images/consulenza.webp"
+          alt="Mani durante una consulenza professionale a una scrivania (immagine illustrativa)"></div>
+        <div class="card-body">
+          <span class="dot" aria-hidden="true"></span>
+          <h3>Consulenza osteopatica</h3>
+          <p>Un primo incontro dedicato alla raccolta delle informazioni e alla comprensione delle esigenze della persona, per valutare l'appropriatezza dell'intervento osteopatico.</p>
+        </div>
+      </article>
+      <article class="card reveal">
+        <div class="card-media"><img loading="lazy" decoding="async" width="800" height="500"
+          src="images/trattamento.webp"
+          alt="Mani durante un trattamento manuale su telo bianco (immagine illustrativa)"></div>
+        <div class="card-body">
+          <span class="dot" aria-hidden="true"></span>
+          <h3>Valutazione e trattamento osteopatico</h3>
+          <p>Attività osteopatica svolta attraverso valutazione e tecniche manuali, nell'ambito delle competenze professionali e delle indicazioni appropriate al caso.</p>
+        </div>
+      </article>
+      <!-- Card informativa: non è una prestazione sanitaria autonoma. Sostituire con un servizio reale se confermato dal Dott. Filardi. -->
+      <article class="card reveal">
+        <div class="card-media"><img loading="lazy" decoding="async" width="800" height="500"
+          src="images/studio.webp"
+          alt="Ambiente di studio luminoso con lettino professionale (immagine illustrativa)"></div>
+        <div class="card-body">
+          <span class="dot" aria-hidden="true"></span>
+          <h3>Informazioni sul percorso professionale</h3>
+          <p>Possibilità di richiedere informazioni sulle competenze professionali di Francesco, sulla formazione in massofisioterapia e scienze motorie e sulle modalità di accesso alle prestazioni effettivamente disponibili.</p>
+        </div>
+      </article>
+    </div>
+
+    <div class="cta-end reveal">
+      <a class="btn btn-primary" href="#contatti">Richiedi una consulenza</a>
+    </div>
+  </div>
+</section>
+
+<!-- 7. COME FUNZIONA -->
+<section class="section bg-ivory" id="come-funziona" aria-labelledby="funziona-title">
+  <div class="flow-bg" aria-hidden="true">
+    <svg viewBox="0 0 900 600"><path d="M120 300c0-150 140-240 330-240s330 90 330 240-140 240-330 240S120 450 120 300Z" fill="none" stroke="#E7E0D5" stroke-width="26" opacity=".6"/><path d="M60 330c120-90 260 60 390 0s260-110 390-20" fill="none" stroke="#E7E0D5" stroke-width="1.5"/></svg>
+  </div>
+  <div class="wrap">
+    <div class="head reveal">
+      <p class="eyebrow">Come funziona</p>
+      <h2 id="funziona-title">Un percorso che inizia dall'ascolto.</h2>
+    </div>
+    <ol class="steps" id="steps">
+      <li class="track" aria-hidden="true" role="presentation"></li>
+      <li class="track-fill" aria-hidden="true" role="presentation"></li>
+      <li class="step"><div class="step-num" aria-hidden="true">01</div><div class="step-body"><h3><span class="sr-only">Fase 1: </span>Contattami</h3><p>Scrivimi attraverso il modulo di contatto per richiedere informazioni o concordare un appuntamento.</p></div></li>
+      <li class="step"><div class="step-num" aria-hidden="true">02</div><div class="step-body"><h3><span class="sr-only">Fase 2: </span>Ci conosciamo</h3><p>Durante la consulenza iniziale raccolgo le informazioni necessarie sulla tua storia e sulle tue esigenze.</p></div></li>
+      <li class="step"><div class="step-num" aria-hidden="true">03</div><div class="step-body"><h3><span class="sr-only">Fase 3: </span>Valutazione</h3><p>Valuto le tue esigenze nell'ambito delle competenze professionali e delle indicazioni appropriate.</p></div></li>
+      <li class="step"><div class="step-num" aria-hidden="true">04</div><div class="step-body"><h3><span class="sr-only">Fase 4: </span>Definiamo il percorso</h3><p>Quando appropriato, ti propongo un percorso coerente con la valutazione professionale.</p></div></li>
+    </ol>
+  </div>
+</section>
+
+<!-- 8. DOVE RICEVO -->
+<section class="section bg-sand" id="dove-ricevo" aria-labelledby="dove-title">
+  <div class="wrap">
+    <div class="head reveal">
+      <p class="eyebrow">Dove ricevo</p>
+      <h2 id="dove-title">Uno studio, una storia professionale.</h2>
+    </div>
+    <div class="addr-box reveal">
+      <svg viewBox="0 0 44 44" aria-hidden="true"><circle cx="22" cy="22" r="21" fill="#F7F5F0" stroke="#B8AFA3"/><path d="M22 33s7-6.3 7-11.5a7 7 0 0 0-14 0C15 26.7 22 33 22 33Z" fill="none" stroke="#354C43" stroke-width="1.6"/><circle cx="22" cy="21.5" r="2.5" fill="#879B88"/></svg>
+      <span class="k">Studio riabilitativo</span>
+      <address>Via La Stazza 4<br>Alatri (FR)</address>
+    </div>
+  </div>
+</section>
+
+<!-- 9. FAQ -->
+<section class="section bg-white" id="faq" aria-labelledby="faq-title">
+  <div class="wrap">
+    <div class="head reveal">
+      <p class="eyebrow">FAQ</p>
+      <h2 id="faq-title">Le risposte alle domande più frequenti.</h2>
+    </div>
+    <div class="faq reveal">
+      <div class="faq-item">
+        <h3 class="faq-q"><button type="button" aria-expanded="false" aria-controls="faq-a1" id="faq-q1">Di cosa si occupa un osteopata?<span class="faq-icon" aria-hidden="true"></span></button></h3>
+        <div class="faq-a" id="faq-a1" role="region" aria-labelledby="faq-q1"><div><p>L'osteopatia è una professione sanitaria: nel mio lavoro mi occupo di valutazioni e interventi manuali, nell'ambito delle competenze professionali e delle indicazioni appropriate.</p></div></div>
+      </div>
+      <div class="faq-item">
+        <h3 class="faq-q"><button type="button" aria-expanded="false" aria-controls="faq-a2" id="faq-q2">Come si svolge una prima consulenza?<span class="faq-icon" aria-hidden="true"></span></button></h3>
+        <div class="faq-a" id="faq-a2" role="region" aria-labelledby="faq-q2"><div><p>Durante la prima consulenza raccolgo le informazioni rilevanti e valuto le tue esigenze individuali, per comprendere se un percorso osteopatico sia appropriato.</p></div></div>
+      </div>
+      <div class="faq-item">
+        <h3 class="faq-q"><button type="button" aria-expanded="false" aria-controls="faq-a3" id="faq-q3">Qual è il percorso formativo di Francesco Maria Filardi?<span class="faq-icon" aria-hidden="true"></span></button></h3>
+        <div class="faq-a" id="faq-a3" role="region" aria-labelledby="faq-q3"><div><p>La mia formazione comprende il diploma ISEF, gli studi universitari in Scienze e Tecnica dello Sport, la massofisioterapia e l'osteopatia.</p></div></div>
+      </div>
+      <div class="faq-item">
+        <h3 class="faq-q"><button type="button" aria-expanded="false" aria-controls="faq-a4" id="faq-q4">Lo studio ospita anche altri professionisti?<span class="faq-icon" aria-hidden="true"></span></button></h3>
+        <div class="faq-a" id="faq-a4" role="region" aria-labelledby="faq-q4"><div><p>Sì. Condivido gli spazi con una massofisioterapista e una terapista della neuro e psicomotricità dell'età evolutiva.</p></div></div>
+      </div>
+      <div class="faq-item">
+        <h3 class="faq-q"><button type="button" aria-expanded="false" aria-controls="faq-a5" id="faq-q5">Come posso richiedere un appuntamento?<span class="faq-icon" aria-hidden="true"></span></button></h3>
+        <div class="faq-a" id="faq-a5" role="region" aria-labelledby="faq-q5"><div><p>Puoi scrivermi tramite il modulo di contatto oppure all'indirizzo <a href="mailto:ffilardi@libero.it">ffilardi@libero.it</a> per richiedere informazioni e concordare insieme le modalità di appuntamento.</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 10. CONTATTI -->
+<section class="section bg-ivory" id="contatti" aria-labelledby="contatti-title">
+  <div class="wrap">
+    <div class="head reveal">
+      <p class="eyebrow">Contatti</p>
+      <h2 id="contatti-title">Il primo passo è un contatto.</h2>
+      <p class="lead">Desideri ricevere informazioni sull'attività osteopatica o richiedere una consulenza? Scrivimi per conoscere le modalità di appuntamento.</p>
+    </div>
+
+    <!-- NOTA: senza backend il modulo compone un'email a ffilardi@libero.it nel programma di posta dell'utente.
+         Prima della pubblicazione collegarlo a un servizio di invio reale (es. script PHP sul server o servizio form) impostando action/method. -->
+    <form class="form-card reveal" id="contact-form" action="mailto:ffilardi@libero.it" method="post" enctype="text/plain" novalidate>
+      <div class="form-grid">
+        <div class="field">
+          <label for="f-nome">Nome e cognome</label>
+          <input id="f-nome" name="nome" type="text" autocomplete="name" required aria-describedby="e-nome">
+          <span class="err" id="e-nome" aria-live="polite"></span>
+        </div>
+        <div class="field">
+          <label for="f-email">Email</label>
+          <input id="f-email" name="email" type="email" autocomplete="email" required aria-describedby="e-email">
+          <span class="err" id="e-email" aria-live="polite"></span>
+        </div>
+        <div class="field">
+          <label for="f-tel">Telefono <span class="opt">(facoltativo)</span></label>
+          <input id="f-tel" name="telefono" type="tel" autocomplete="tel" inputmode="tel">
+        </div>
+        <div class="field">
+          <label for="f-oggetto">Oggetto</label>
+          <input id="f-oggetto" name="oggetto" type="text" required aria-describedby="e-oggetto">
+          <span class="err" id="e-oggetto" aria-live="polite"></span>
+        </div>
+        <div class="field full">
+          <label for="f-msg">Messaggio</label>
+          <textarea id="f-msg" name="messaggio" required aria-describedby="e-msg"></textarea>
+          <span class="err" id="e-msg" aria-live="polite"></span>
+        </div>
+        <div class="consent">
+          <input id="f-privacy" name="privacy" type="checkbox" required aria-describedby="e-privacy">
+          <label for="f-privacy">Ho letto l'<a href="privacy-policy.html">informativa sulla privacy</a> e acconsento al trattamento dei dati per ricevere una risposta.</label>
+        </div>
+        <span class="err" id="e-privacy" aria-live="polite" style="grid-column:1/-1;margin-top:-12px"></span>
+        <div class="form-actions">
+          <button class="btn btn-primary" type="submit">Richiedi una consulenza</button>
+        </div>
+        <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+      </div>
+    </form>
+  </div>
+</section>
+
+</main>
+
+<!-- 11. FOOTER -->
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="foot-top">
+      <div class="foot-brand">
+        <span class="brand">
+          <svg class="brand-mark" viewBox="0 0 10 34" aria-hidden="true"><path d="M8 2 C 1 10, 1 24, 8 32" fill="none" stroke="#879B88" stroke-width="1.6" stroke-linecap="round"/></svg>
+          <span class="brand-text"><span class="brand-name">DOTT. FRANCESCO MARIA FILARDI</span><span class="brand-sub">OSTEOPATA</span></span>
+        </span>
+        <p class="motto">Esperienza, equilibrio e attenzione al movimento.</p>
+      </div>
+      <div>
+        <p class="foot-h">Contatti</p>
+        <ul class="foot-list">
+          <li>Via La Stazza 4, Alatri (FR)</li>
+          <li><a href="mailto:ffilardi@libero.it">ffilardi@libero.it</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="foot-h">Link</p>
+        <ul class="foot-list foot-links">
+          <li><a href="#chi-sono">Chi sono</a></li>
+          <li><a href="#a-chi-mi-rivolgo">A chi mi rivolgo</a></li>
+          <li><a href="#approccio">Approccio</a></li>
+          <li><a href="#servizi">Servizi</a></li>
+          <li><a href="#dove-ricevo">Dove ricevo</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#contatti">Contatti</a></li>
+          <!-- TODO: creare le pagine di Privacy e Cookie Policy prima della pubblicazione -->
+          <li><a href="privacy-policy.html">Privacy Policy</a></li>
+          <li><a href="cookie-policy.html">Cookie Policy</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© <span id="y">2026</span> Dott. Francesco Maria Filardi · Osteopata</span>
+      <!-- DATI PROFESSIONALI E FISCALI: inserire solo dopo verifica (iscrizione professionale/Albo, Partita IVA, dati legali). -->
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  document.body.classList.remove('no-js');
+  var y=document.getElementById('y'); if(y) y.textContent=new Date().getFullYear();
+  var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // Menu mobile
+  var burger=document.querySelector('.burger'), nav=document.getElementById('nav');
+  function setMenu(open){
+    burger.setAttribute('aria-expanded',open);
+    burger.setAttribute('aria-label',open?'Chiudi il menu':'Apri il menu');
+    nav.classList.toggle('open',open);
+  }
+  burger.addEventListener('click',function(){setMenu(burger.getAttribute('aria-expanded')!=='true')});
+  nav.addEventListener('click',function(e){if(e.target.closest('a'))setMenu(false)});
+  document.addEventListener('keydown',function(e){
+    if(e.key==='Escape'&&burger.getAttribute('aria-expanded')==='true'){setMenu(false);burger.focus()}
+  });
+  window.matchMedia('(min-width:1024px)').addEventListener('change',function(m){if(m.matches)setMenu(false)});
+
+  // FAQ accordion
+  document.querySelectorAll('.faq-q button').forEach(function(btn){
+    btn.addEventListener('click',function(){
+      var open=btn.getAttribute('aria-expanded')!=='true';
+      btn.setAttribute('aria-expanded',open);
+      btn.closest('.faq-item').classList.toggle('open',open);
+    });
+  });
+
+  // Approccio: evidenzia il punto sull'orbita
+  document.querySelectorAll('.pt').forEach(function(p){
+    var node=document.querySelector('.orbit-core .node[data-n="'+p.dataset.n+'"]');
+    p.addEventListener('mouseenter',function(){node.classList.add('on')});
+    p.addEventListener('mouseleave',function(){node.classList.remove('on')});
+  });
+
+  // Come funziona: linea che si disegna con lo scroll e tappe che si attivano
+  var stepsEl=document.getElementById('steps'), track=stepsEl.querySelector('.track'), fill=stepsEl.querySelector('.track-fill');
+  var steps=[].slice.call(stepsEl.querySelectorAll('.step')), flowBg=document.querySelector('.flow-bg svg');
+  var geo=null;
+  function measure(){
+    var base=stepsEl.getBoundingClientRect();
+    var c=steps.map(function(s){var r=s.querySelector('.step-num').getBoundingClientRect();return {x:r.left+r.width/2-base.left,y:r.top+r.height/2-base.top}});
+    var horiz=Math.abs(c[0].y-c[c.length-1].y)<2;
+    geo={c:c,horiz:horiz};
+    if(horiz){
+      track.style.cssText=fill.style.cssText='left:'+c[0].x+'px;top:'+c[0].y+'px;width:'+(c[c.length-1].x-c[0].x)+'px;height:1px';
+    }else{
+      track.style.cssText=fill.style.cssText='left:'+c[0].x+'px;top:'+c[0].y+'px;width:1px;height:'+(c[c.length-1].y-c[0].y)+'px';
+    }
+    update();
+  }
+  function update(){
+    if(!geo) return;
+    var vh=window.innerHeight, base=stepsEl.getBoundingClientRect(), p;
+    if(reduce){p=1}
+    else if(geo.horiz){p=(vh*0.85-(base.top+geo.c[0].y))/(vh*0.45)}
+    else{var len=geo.c[geo.c.length-1].y-geo.c[0].y;p=(vh*0.62-(base.top+geo.c[0].y))/len}
+    p=Math.max(0,Math.min(1,p));
+    fill.style.transform=geo.horiz?'scaleX('+p+')':'scaleY('+p+')';
+    var last=geo.c.length-1;
+    steps.forEach(function(s,i){
+      var at=geo.horiz?(i/last):((geo.c[i].y-geo.c[0].y)/(geo.c[last].y-geo.c[0].y));
+      s.classList.toggle('active',p>=at-0.001&&p>0||reduce);
+    });
+    if(flowBg&&!reduce){var sec=stepsEl.closest('section').getBoundingClientRect();flowBg.style.setProperty('--par',((sec.top+sec.height/2-vh/2)*-0.12)+'px')}
+  }
+  var ticking=false;
+  window.addEventListener('scroll',function(){if(!ticking){ticking=true;requestAnimationFrame(function(){update();ticking=false})}},{passive:true});
+  window.addEventListener('resize',measure);
+  if(document.fonts&&document.fonts.ready) document.fonts.ready.then(measure);
+  measure();
+
+  // Modulo contatti: validazione e composizione email
+  var form=document.getElementById('contact-form'), status=document.getElementById('form-status');
+  function setErr(id,msg){
+    var el=document.getElementById(id), input=form.querySelector('[aria-describedby="'+id+'"]');
+    el.textContent=msg; (input.closest('.field')||input.closest('.consent')).classList.toggle('invalid',!!msg);
+    input.setAttribute('aria-invalid',msg?'true':'false');
+    return !msg;
+  }
+  form.addEventListener('submit',function(e){
+    e.preventDefault();
+    var v=function(n){return form.elements[n].value.trim()};
+    var ok=[
+      setErr('e-nome',v('nome')?'':'Inserisci nome e cognome.'),
+      setErr('e-email',/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v('email'))?'':'Inserisci un indirizzo email valido.'),
+      setErr('e-oggetto',v('oggetto')?'':'Inserisci l’oggetto.'),
+      setErr('e-msg',v('messaggio')?'':'Scrivi il tuo messaggio.'),
+      setErr('e-privacy',form.elements.privacy.checked?'':'È necessario il consenso al trattamento dei dati.')
+    ].every(Boolean);
+    if(!ok){var first=form.querySelector('[aria-invalid="true"]');if(first)first.focus();status.textContent='';return}
+    var body='Nome: '+v('nome')+'\nEmail: '+v('email')+(v('telefono')?'\nTelefono: '+v('telefono'):'')+'\n\n'+v('messaggio');
+    window.location.href='mailto:ffilardi@libero.it?subject='+encodeURIComponent(v('oggetto'))+'&body='+encodeURIComponent(body);
+    status.textContent='Grazie! Si aprirà il tuo programma di posta con il messaggio già compilato: premi Invia per completare la richiesta.';
+  });
+
+  // Reveal + voce di menu attiva
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{rootMargin:'0px 0px -8% 0px'});
+    document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)});
+    var links=document.querySelectorAll('.nav a.link');
+    var so=new IntersectionObserver(function(es){es.forEach(function(e){
+      if(e.isIntersecting){links.forEach(function(l){l.setAttribute('aria-current',l.getAttribute('href')==='#'+e.target.id?'true':'false')})}
+    })},{rootMargin:'-45% 0px -50% 0px'});
+    document.querySelectorAll('main section[id]').forEach(function(s){so.observe(s)});
+  } else {
+    document.querySelectorAll('.reveal').forEach(function(el){el.classList.add('in')});
+  }
+})();
+</script>
+</body>
+</html>
